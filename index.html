@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>yourname — сетап, гир и обзоры</title>
+<meta name="description" content="Мой сетап, проверенный гир по типам устройств, обзоры, промокоды и статистика каналов.">
+<meta property="og:title" content="yourname — сетап, гир и обзоры">
+<meta property="og:description" content="Мой сетап, проверенный гир по типам устройств, обзоры, промокоды и статистика каналов.">
+<meta property="og:image" content="https://YOURDOMAIN.com/og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15152b">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#15152b; --surface:#1e1e3b; --line:#34345a; --text:#eceaf7; --muted:#a09eba;
+  --accent:#9d8cff; --accent-ink:#15152b; --warm:#ffc46b; --good:#7fe0b0;
+  --display:'Bricolage Grotesque','Arial Narrow',Arial,sans-serif;
+  --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --bg:#f6f5fb; --surface:#ffffff; --line:#dcdaea; --text:#1c1b33; --muted:#5f5d7e;
+    --accent:#5b47e0; --accent-ink:#ffffff; --warm:#a85a00; --good:#14804f;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#f6f5fb; --surface:#ffffff; --line:#dcdaea; --text:#1c1b33; --muted:#5f5d7e;
+  --accent:#5b47e0; --accent-ink:#ffffff; --warm:#a85a00; --good:#14804f;
+}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700}
+section{padding:72px 0 0}
+.sub{color:var(--muted);max-width:56ch;margin:10px 0 28px}
+
+/* header */
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
+.brand{font:800 1.15rem var(--display);text-decoration:none;letter-spacing:-.02em}
+nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav a{padding:6px 12px;border-radius:999px;text-decoration:none;color:var(--muted);font-size:.92rem;white-space:nowrap}
+nav a:hover{color:var(--text);background:var(--surface)}
+
+/* hero */
+.hero{padding-top:56px}
+.hero h1{font-size:clamp(3.6rem,15vw,10.5rem);font-weight:800;letter-spacing:-.05em;line-height:.9}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:50ch;margin:20px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:44px;border-top:1px solid var(--line)}
+.stat{padding:18px 20px 4px 0}
+.stat + .stat{padding-left:20px;border-left:1px solid var(--line)}
+.stat .plat{color:var(--muted);font-size:.9rem;display:flex;gap:8px;align-items:center}
+.stat .num{font:800 clamp(1.9rem,6vw,3.4rem)/1 var(--display);letter-spacing:-.03em;margin:6px 0}
+.stat .meta{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--muted);flex-wrap:wrap}
+.delta.up{color:var(--good)} .delta.down{color:var(--warm)}
+.spark{width:72px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+.updated{color:var(--muted);font-size:.82rem;margin-top:14px}
+
+/* setup */
+.spec{border-top:1px solid var(--line)}
+.spec-row{display:grid;grid-template-columns:160px 1fr auto;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.spec-row .k{color:var(--muted)}
+.spec-row .v{font-weight:500}
+.spec-row a{color:var(--accent);text-decoration:none;font-size:.92rem}
+.spec-row a:hover{text-decoration:underline}
+
+/* gear */
+.gear{display:grid;grid-template-columns:220px 1fr;gap:36px;align-items:start}
+.tabs{display:flex;flex-direction:column;gap:2px;position:sticky;top:76px}
+.tab{all:unset;cursor:pointer;display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-radius:10px;color:var(--muted);font-weight:500}
+.tab:hover{background:var(--surface);color:var(--text)}
+.tab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+.tab .c{opacity:.7;font-variant-numeric:tabular-nums}
+.tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.items{border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:1fr auto;gap:8px 20px;padding:18px 0;border-bottom:1px solid var(--line);align-items:center}
+.item h3{font-size:1.15rem;font-weight:700;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.item p{margin:4px 0 0;color:var(--muted);max-width:52ch}
+.badge{font:600 .72rem var(--body);padding:2px 8px;border-radius:999px;border:1px solid var(--good);color:var(--good)}
+.buy{display:flex;align-items:center;gap:14px}
+.price{font:700 1.05rem var(--display);color:var(--warm);font-variant-numeric:tabular-nums}
+.btn{display:inline-block;padding:9px 18px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:.92rem;text-decoration:none;border:0;cursor:pointer;font-family:var(--body)}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--accent)}
+.note{color:var(--muted);font-size:.85rem;margin-top:14px}
+
+/* deals */
+.deals{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.deal{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.deal h3{font-size:1.1rem}
+.deal .off{color:var(--warm);font:700 1.5rem var(--display)}
+.code{display:flex;gap:8px}
+.code code{flex:1;padding:9px 12px;border:1px dashed var(--line);border-radius:8px;font-size:.95rem;letter-spacing:.04em}
+
+/* reviews */
+.rev{display:grid;grid-template-columns:64px 1fr auto;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start}
+.reviews{border-top:1px solid var(--line)}
+.score{font:800 2rem/1 var(--display);color:var(--accent)}
+.rev h3{font-size:1.15rem}
+.rev p{margin:6px 0 0;color:var(--muted);max-width:60ch}
+.pc{display:flex;gap:16px;flex-wrap:wrap;font-size:.88rem;margin-top:8px}
+.pc .p{color:var(--good)} .pc .m{color:var(--warm)}
+
+/* media kit */
+.kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.kitcard{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--surface)}
+.kitcard h3{font-size:1.1rem;margin-bottom:12px}
+.kitcard dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:6px 12px}
+.kitcard dt{color:var(--muted)} .kitcard dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.kitcard .spark{width:100%;height:46px;margin-top:14px}
+
+/* contact */
+.contact{padding-bottom:72px}
+.contact .big{font:700 clamp(1.6rem,5vw,3rem) var(--display);letter-spacing:-.03em;word-break:break-word}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.85rem}
+
+@media (max-width:760px){
+  .gear{grid-template-columns:1fr;gap:18px}
+  .tabs{flex-direction:row;overflow-x:auto;position:static;padding-bottom:6px;scrollbar-width:none}
+  .tab{white-space:nowrap;flex:none;border:1px solid var(--line)}
+  .spec-row{grid-template-columns:1fr;gap:2px}
+  .item{grid-template-columns:1fr}
+  .rev{grid-template-columns:48px 1fr}
+  .rev .btn{grid-column:2}
+  .stat{padding-right:10px}.stat + .stat{padding-left:10px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" id="brand"></a>
+    <nav aria-label="Разделы">
+      <a href="#setup">Сетап</a><a href="#gear">Гир</a><a href="#deals">Скидки</a><a href="#reviews">Обзоры</a><a href="#kit">Медиакит</a><a href="#contact">Связь</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <h1 id="h1"></h1>
+      <p class="lead" id="lead"></p>
+      <div class="stats" id="stats" aria-live="polite"></div>
+      <div class="updated" id="updated"></div>
+    </div>
+  </section>
+
+  <section id="setup"><div class="wrap">
+    <h2>Мой сетап</h2>
+    <p class="sub">Из чего собран стол прямо сейчас.</p>
+    <div class="spec" id="spec"></div>
+  </div></section>
+
+  <section id="gear"><div class="wrap">
+    <h2>Гир по типам устройств</h2>
+    <p class="sub">Только то, чем я пользуюсь или что реально советую. Выберите тип слева.</p>
+    <div class="gear">
+      <div class="tabs" role="tablist" aria-label="Тип устройства" id="tabs"></div>
+      <div id="panel" role="tabpanel" tabindex="0"></div>
+    </div>
+    <p class="note">Ссылки партнёрские: если купите по ним, я получу комиссию, а цена для вас не изменится.</p>
+  </div></section>
+
+  <section id="deals"><div class="wrap">
+    <h2>Скидки и промокоды</h2>
+    <p class="sub">Актуальные коды. Нажмите, чтобы скопировать.</p>
+    <div class="deals" id="deals-list"></div>
+  </div></section>
+
+  <section id="reviews"><div class="wrap">
+    <h2>Обзоры</h2>
+    <p class="sub">Коротко: что понравилось, что нет, брать или нет.</p>
+    <div class="reviews" id="rev-list"></div>
+  </div></section>
+
+  <section id="kit"><div class="wrap">
+    <h2>Медиакит</h2>
+    <p class="sub">Цифры для рекламодателей. Обновляются автоматически раз в неделю.</p>
+    <div class="kit" id="kit-list"></div>
+    <p style="margin-top:22px"><a class="btn ghost" id="kit-pdf" href="#">Скачать медиакит (PDF)</a></p>
+  </div></section>
+
+  <section id="contact" class="contact"><div class="wrap">
+    <h2>Сотрудничество</h2>
+    <p class="sub">Интеграции, обзоры, рекламные форматы.</p>
+    <a class="big" id="mail" href="#"></a>
+    <div class="socials" id="socials"></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap" id="foot"></div></footer>
+
+<script>
+/* ============ ВСЁ, ЧТО НУЖНО РЕДАКТИРОВАТЬ, — ЗДЕСЬ ============ */
+const SITE = {
+  name: "yourname",
+  lead: "PC-сетапы, периферия и честные обзоры. Тестирую технику сам и показываю, что стоит своих денег.",
+  email: "hello@yourdomain.com",
+  mediaKitPdf: "#", // положите файл рядом, например "mediakit.pdf"
+  socials: {
+    youtube:   "https://youtube.com/@yourname",
+    instagram: "https://instagram.com/yourname",
+    tiktok:    "https://tiktok.com/@yourname"
+  },
+  audience: "Аудитория: 18–34, интересы — игры, ПК, стриминг. Замените на свои данные."
+};
+
+const SETUP = [
+  { k: "Процессор",   v: "AMD Ryzen 7 7800X3D", url: "#" },
+  { k: "Видеокарта",  v: "NVIDIA RTX 4070 Super", url: "#" },
+  { k: "Монитор",     v: "27\" 1440p 240 Гц OLED", url: "#" },
+  { k: "Клавиатура",  v: "75% с линейными свичами", url: "#" },
+  { k: "Мышь",        v: "Лёгкая беспроводная, 55 г", url: "#" },
+  { k: "Микрофон",    v: "Динамический XLR + интерфейс", url: "#" }
+];
+
+/* Типы устройств. mine:true — «в моём сетапе». Добавляйте позиции прямо в массив. */
+const GEAR = [
+  { id: "mice", title: "Мыши", items: [
+    { name: "Название мыши 1", why: "Лёгкая, сенсор без сглаживания, батареи хватает на месяц.", price: "$99", url: "#", mine: true },
+    { name: "Название мыши 2", why: "Бюджетная альтернатива с тем же сенсором.", price: "$49", url: "#" }
+  ]},
+  { id: "keyboards", title: "Клавиатуры", items: [
+    { name: "Название клавиатуры 1", why: "Тихие линейные свичи, прокладка в корпусе, хороший звук из коробки.", price: "$149", url: "#", mine: true },
+    { name: "Название клавиатуры 2", why: "Для тех, кто хочет хот-свап за небольшие деньги.", price: "$79", url: "#" }
+  ]},
+  { id: "monitors", title: "Мониторы", items: [
+    { name: "Название монитора 1", why: "OLED, 240 Гц, почти нулевой отклик. Следите за выгоранием.", price: "$699", url: "#", mine: true },
+    { name: "Название монитора 2", why: "IPS 165 Гц: дешевле и без риска выгорания.", price: "$279", url: "#" }
+  ]},
+  { id: "audio", title: "Наушники", items: [
+    { name: "Название наушников 1", why: "Лучший звук для игр и музыки за свою цену.", price: "$129", url: "#", mine: true }
+  ]},
+  { id: "mics", title: "Микрофоны", items: [
+    { name: "Название микрофона 1", why: "Подавляет шум комнаты, не нужен дорогой интерфейс.", price: "$89", url: "#" }
+  ]},
+  { id: "pc", title: "Комплектующие ПК", items: [
+    { name: "Название процессора", why: "Лучший выбор для игр прямо сейчас.", price: "$399", url: "#", mine: true },
+    { name: "Название видеокарты", why: "Золотая середина по цене и FPS в 1440p.", price: "$599", url: "#", mine: true }
+  ]},
+  { id: "desk", title: "Стол и свет", items: [
+    { name: "Название стола", why: "Регулируемый по высоте, не шатается на максимуме.", price: "$349", url: "#" }
+  ]}
+];
+
+const DEALS = [
+  { shop: "Магазин 1", off: "−10%", text: "На всю периферию", code: "YOURNAME10", url: "#" },
+  { shop: "Магазин 2", off: "−15%", text: "На клавиатуры и свичи", code: "YOURNAME15", url: "#" }
+];
+
+const REVIEWS = [
+  { title: "Название устройства 1", score: "9.0", text: "Две недели ежедневного использования. Короткий вывод в два предложения.", pros: "Лёгкая, сенсор, автономность", cons: "Цена", url: "#" },
+  { title: "Название устройства 2", score: "7.5", text: "Хороший вариант за свои деньги, но есть нюансы.", pros: "Звук, сборка", cons: "ПО сырое", url: "#" }
+];
+/* ================================================================= */
+
+const PLATFORMS = {
+  youtube:   { label: "YouTube",   unit: "подписчиков" },
+  instagram: { label: "Instagram", unit: "подписчиков" },
+  tiktok:    { label: "TikTok",    unit: "подписчиков" }
+};
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = (n) => n == null ? "—" : new Intl.NumberFormat("ru-RU", { notation: n >= 10000 ? "compact" : "standard", maximumFractionDigits: 1 }).format(n);
+const REL = 'rel="sponsored nofollow noopener noreferrer" target="_blank"';
+
+/* --- статичные секции --- */
+document.title = SITE.name + " — сетап, гир и обзоры";
+$("#brand").textContent = SITE.name;
+$("#h1").textContent = SITE.name;
+$("#lead").textContent = SITE.lead;
+$("#mail").textContent = SITE.email; $("#mail").href = "mailto:" + SITE.email;
+$("#kit-pdf").href = SITE.mediaKitPdf;
+$("#foot").textContent = "© " + new Date().getFullYear() + " " + SITE.name + ". Часть ссылок на сайте партнёрские.";
+$("#socials").innerHTML = Object.entries(SITE.socials).map(([k, u]) =>
+  `<a class="btn ghost" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${PLATFORMS[k].label}</a>`).join("");
+
+$("#spec").innerHTML = SETUP.map(r =>
+  `<div class="spec-row"><span class="k">${esc(r.k)}</span><span class="v">${esc(r.v)}</span><a href="${esc(r.url)}" ${REL}>Где купить</a></div>`).join("");
+
+$("#deals-list").innerHTML = DEALS.map((d, i) =>
+  `<div class="deal"><h3>${esc(d.shop)}</h3><div class="off">${esc(d.off)}</div><div>${esc(d.text)}</div>
+   <div class="code"><code>${esc(d.code)}</code><button class="btn ghost" data-copy="${i}">Копировать</button></div>
+   <a href="${esc(d.url)}" ${REL}>Перейти в магазин</a></div>`).join("");
+document.addEventListener("click", async (e) => {
+  const b = e.target.closest("[data-copy]"); if (!b) return;
+  try { await navigator.clipboard.writeText(DEALS[b.dataset.copy].code); b.textContent = "Скопировано"; }
+  catch { b.textContent = "Выделите и скопируйте"; }
+  setTimeout(() => b.textContent = "Копировать", 1800);
+});
+
+$("#rev-list").innerHTML = REVIEWS.map(r =>
+  `<article class="rev"><div class="score">${esc(r.score)}</div>
+   <div><h3>${esc(r.title)}</h3><p>${esc(r.text)}</p>
+   <div class="pc"><span class="p">Плюсы: ${esc(r.pros)}</span><span class="m">Минусы: ${esc(r.cons)}</span></div></div>
+   <a class="btn ghost" href="${esc(r.url)}" ${REL}>Подробнее</a></article>`).join("");
+
+/* --- гир по типам --- */
+let current = location.hash.startsWith("#gear-") ? location.hash.slice(6) : GEAR[0].id;
+function renderGear() {
+  $("#tabs").innerHTML = GEAR.map(g =>
+    `<button class="tab" role="tab" id="tab-${g.id}" aria-selected="${g.id === current}" data-id="${g.id}"><span>${esc(g.title)}</span><span class="c">${g.items.length}</span></button>`).join("");
+  const g = GEAR.find(x => x.id === current) || GEAR[0];
+  $("#panel").setAttribute("aria-labelledby", "tab-" + g.id);
+  $("#panel").innerHTML = `<div class="items">` + g.items.map(it =>
+    `<div class="item"><div><h3>${esc(it.name)}${it.mine ? '<span class="badge">в моём сетапе</span>' : ""}</h3><p>${esc(it.why)}</p></div>
+     <div class="buy"><span class="price">${esc(it.price)}</span><a class="btn" href="${esc(it.url)}" ${REL}>Купить</a></div></div>`).join("") + `</div>`;
+}
+$("#tabs").addEventListener("click", (e) => {
+  const t = e.target.closest(".tab"); if (!t) return;
+  current = t.dataset.id; renderGear(); history.replaceState(null, "", "#gear-" + current);
+});
+$("#tabs").addEventListener("keydown", (e) => {
+  if (!["ArrowDown","ArrowUp","ArrowLeft","ArrowRight"].includes(e.key)) return;
+  const i = GEAR.findIndex(g => g.id === current), d = (e.key === "ArrowDown" || e.key === "ArrowRight") ? 1 : -1;
+  current = GEAR[(i + d + GEAR.length) % GEAR.length].id; renderGear(); $("#tab-" + current).focus(); e.preventDefault();
+});
+renderGear();
+
+/* --- статистика из stats.json (обновляется скриптом раз в неделю) --- */
+const FALLBACK = null;
+function spark(values) {
+  if (!values || values.length < 2) return "";
+  const min = Math.min(...values), max = Math.max(...values), r = max - min || 1;
+  const pts = values.map((v, i) => `${(i / (values.length - 1) * 100).toFixed(1)},${(26 - ((v - min) / r) * 24).toFixed(1)}`).join(" ");
+  return `<svg class="spark" viewBox="0 0 100 28" preserveAspectRatio="none" aria-hidden="true"><polyline points="${pts}" vector-effect="non-scaling-stroke"/></svg>`;
+}
+function renderStats(data) {
+  const hist = data && data.history || [];
+  const series = (k) => hist.map(h => h[k]).filter(v => typeof v === "number");
+  const keys = Object.keys(PLATFORMS);
+  $("#stats").innerHTML = keys.map(k => {
+    const p = data && data.platforms && data.platforms[k];
+    const s = series(k), d = s.length > 1 ? s[s.length - 1] - s[s.length - 2] : null;
+    const dTxt = d == null ? "" : `<span class="delta ${d >= 0 ? "up" : "down"}">${d >= 0 ? "+" : "−"}${fmt(Math.abs(d))} за неделю</span>`;
+    return `<div class="stat"><div class="plat">${PLATFORMS[k].label}</div><div class="num">${fmt(p && p.followers)}</div><div class="meta">${dTxt}${spark(s.slice(-12))}</div></div>`;
+  }).join("");
+  $("#updated").textContent = data && data.updated ? "Данные обновлены " + new Date(data.updated).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" }) : "Данные пока не загружены";
+  $("#kit-list").innerHTML = keys.map(k => {
+    const p = data && data.platforms && data.platforms[k] || {};
+    const rows = [["Подписчики", p.followers], ["Публикации", p.posts], ["Просмотры всего", p.views]].filter(r => r[1] != null);
+    return `<div class="kitcard"><h3>${PLATFORMS[k].label}</h3><dl>${rows.map(r => `<dt>${r[0]}</dt><dd>${fmt(r[1])}</dd>`).join("") || "<dt>Нет данных</dt><dd>—</dd>"}</dl>${spark(series(k))}</div>`;
+  }).join("") + `<div class="kitcard"><h3>Аудитория</h3><p style="margin:0;color:var(--muted)">${esc(SITE.audience)}</p></div>`;
+}
+renderStats(FALLBACK);
+fetch("stats.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : Promise.reject()).then(renderStats).catch(() => {});
+</script>
+</body>
+</html>

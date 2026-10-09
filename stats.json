@@ -1,0 +1,17 @@
+{
+  "updated": "2026-10-05T06:00:00.000Z",
+  "platforms": {
+    "youtube":   { "followers": 12400, "posts": 86,  "views": 1840000 },
+    "instagram": { "followers": 8300,  "posts": 214 },
+    "tiktok":    { "followers": 45200, "posts": 301 }
+  },
+  "history": [
+    { "date": "2026-08-24", "youtube": 11200, "instagram": 7700, "tiktok": 41100 },
+    { "date": "2026-08-31", "youtube": 11450, "instagram": 7820, "tiktok": 42300 },
+    { "date": "2026-09-07", "youtube": 11700, "instagram": 7950, "tiktok": 43000 },
+    { "date": "2026-09-14", "youtube": 11900, "instagram": 8010, "tiktok": 43800 },
+    { "date": "2026-09-21", "youtube": 12050, "instagram": 8120, "tiktok": 44400 },
+    { "date": "2026-09-28", "youtube": 12250, "instagram": 8200, "tiktok": 44800 },
+    { "date": "2026-10-05", "youtube": 12400, "instagram": 8300, "tiktok": 45200 }
+  ]
+}
