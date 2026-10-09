@@ -27,10 +27,11 @@ const fetchers = {
     return { followers: +s.subscriberCount, posts: +s.videoCount, views: +s.viewCount };
   },
 
-  // Instagram Graph API. Нужны IG_USER_ID и IG_ACCESS_TOKEN (аккаунт Business/Creator)
+  // Instagram API with Instagram Login. Нужен только IG_ACCESS_TOKEN
+  // (токен из App Dashboard, живёт 60 дней; аккаунт Business или Creator)
   async instagram() {
-    if (!env.IG_USER_ID || !env.IG_ACCESS_TOKEN) return null;
-    const url = `https://graph.facebook.com/v21.0/${env.IG_USER_ID}?fields=followers_count,media_count&access_token=${env.IG_ACCESS_TOKEN}`;
+    if (!env.IG_ACCESS_TOKEN) return null;
+    const url = `https://graph.instagram.com/v21.0/me?fields=followers_count,media_count&access_token=${env.IG_ACCESS_TOKEN}`;
     const s = await getJson(url);
     return { followers: s.followers_count, posts: s.media_count };
   },
