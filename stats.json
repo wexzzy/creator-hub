@@ -1,5 +1,16 @@
 {
-  "updated": null,
-  "platforms": {},
-  "history": []
+  "updated": "2026-10-09T09:18:00.092Z",
+  "platforms": {
+    "youtube": {
+      "followers": 572,
+      "posts": 112,
+      "views": 715629
+    }
+  },
+  "history": [
+    {
+      "date": "2026-10-09",
+      "youtube": 572
+    }
+  ]
 }
