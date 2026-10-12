@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>yourname — Creator Hub</title>
-<meta name="description" content="Сетап, гир, промокоды и статистика каналов.">
-<meta property="og:title" content="yourname — Creator Hub">
-<meta property="og:description" content="Сетап, гир, промокоды и статистика каналов.">
+<title>wexzzy — Creator Hub</title>
+<meta name="description" content="Контент о девайсах, сетапах и периферии. Гир, промокоды и сотрудничество.">
+<meta property="og:title" content="wexzzy — Creator Hub">
+<meta property="og:description" content="Контент о девайсах, сетапах и периферии. Гир, промокоды и сотрудничество.">
 <meta property="og:image" content="https://YOURDOMAIN.com/og-image.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,25 +220,25 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);text-al
 <script>
 /* ================== РЕДАКТИРУЙТЕ ТОЛЬКО ЭТОТ БЛОК ================== */
 const SITE = {
-  name: "yourname",
+  name: "wexzzy",
   verified: false,
   avatar: "img/avatar.jpg",                 // положите фото в папку img (если файла нет — будет буква)
   heroImage: "",                            // например "img/setup.jpg"; пусто = не показывать
-  meta: ["Страна", "1 год в контенте", "PC-контент"],
-  bio: "Делаю контент про PC-сетапы, периферию и распаковки. Показываю чистые, эстетичные видео про свой стол, гир и апгрейды.",
-  email: "hello@yourdomain.com",
-  country: "Страна"
+  meta: ["kazakhstan", "4 года в контенте", "tech addict"],
+  bio: "делаю контент о сетапах и девайсах",
+  email: "wexzzymedia@gmail.com",
+  country: "kazakhstan"
 };
 const CONTACT = {
-  description: "Открыт к спонсорству, обзорам и коллаборациям. Напишите мне.",
+  description: "открыт к сотрудничеству. напишите мне.",
   endpoint: "",  // адрес формы Formspree (https://formspree.io/f/xxxx). Пусто = письмо откроется в почтовой программе
   tags: ["Спонсорские обзоры", "Партнёрские программы", "Амбассадорство", "Розыгрыши", "Распаковки"]
 };
 const LINKS = [
-  { mono: "TT", label: "TikTok",    handle: "@yourname", url: "https://tiktok.com/@yourname" },
-  { mono: "IG", label: "Instagram", handle: "@yourname", url: "https://instagram.com/yourname" },
-  { mono: "YT", label: "YouTube",   handle: "@yourname", url: "https://youtube.com/@yourname" },
-  { mono: "@",  label: "Почта",     handle: "hello@yourdomain.com", url: "mailto:hello@yourdomain.com" }
+  { mono: "TT", label: "TikTok",    handle: "@wexzzy_", url: "https://www.tiktok.com/@wexzzy_" },
+  { mono: "IG", label: "Instagram", handle: "@wexzzy_", url: "https://www.instagram.com/wexzzy_" },
+  { mono: "YT", label: "YouTube",   handle: "@wexzzy",  url: "https://youtube.com/@wexzzy" },
+  { mono: "@",  label: "Почта",     handle: "wexzzymedia@gmail.com", url: "mailto:wexzzymedia@gmail.com" }
 ];
 
 /* Скидки. logo: путь к картинке (необязательно). Без logo показывается название магазина. */
@@ -279,10 +279,11 @@ const REVIEWS = [
 
 /* Аудитория: данные из ваших приложений, вводятся вручную (API их не отдаёт) */
 const AUDIENCE = {
-  updated: "2026-10-01",
-  period: "последние 28 дней",
-  ages: [["18–24", 38], ["25–34", 45], ["35–44", 9], ["45+", 8]],
-  countries: [["США", 12], ["Индия", 8], ["Турция", 7], ["Бразилия", 5]]
+  updated: "2026-10-12",
+  period: "последние 60 дней",
+  metrics: [["3.2M", "Просмотры"], ["976.8K", "Зрители"], ["122.7K", "Лайки"], ["5.7K", "Репосты"], ["5.1K", "Комментарии"]],
+  ages: [],   // возраст пока не указан; например [["18–24", 38], ["25–34", 45]]
+  countries: [["Россия", 44.5], ["Казахстан", 14.7], ["Украина", 9.3], ["Беларусь", 8.3], ["США", 4.1]]
 };
 /* ====================================================================== */
 
@@ -420,8 +421,9 @@ function render(data) {
     ].filter(Boolean);
     return `<section class="card"><div class="ahead"><h3>${PLAT[k]}</h3><small>авто · раз в неделю</small></div>
       <div class="tiles">${tiles.map(t => `<div class="tile"><div class="n">${t[0]}</div><div class="l">${t[1]}</div>${t[2]}</div>`).join("")}</div>${spark(s)}</section>`;
-  }).join("") + `<section class="card"><div class="ahead"><h3>Аудитория</h3><small>${esc(AUDIENCE.period)}</small></div>
-    <div class="sub">Возраст</div>${AUDIENCE.ages.map(a => `<div class="bar"><span>${esc(a[0])}</span><i><b style="width:${a[1]}%"></b></i><span>${a[1]}%</span></div>`).join("")}
+  }).join("") + `<section class="card"><div class="ahead"><h3>Охваты и аудитория</h3><small>${esc(AUDIENCE.period)}</small></div>
+    <div class="tiles">${AUDIENCE.metrics.map(m => `<div class="tile"><div class="n">${esc(m[0])}</div><div class="l">${esc(m[1])}</div></div>`).join("")}</div>
+    ${AUDIENCE.ages.length ? `<div class="sub">Возраст</div>${AUDIENCE.ages.map(a => `<div class="bar"><span>${esc(a[0])}</span><i><b style="width:${a[1]}%"></b></i><span>${a[1]}%</span></div>`).join("")}` : ""}
     <div class="sub">Топ стран</div><div class="loc">${AUDIENCE.countries.map(c => `<span>${esc(c[0])}<em>${c[1]}%</em></span>`).join("")}</div></section>`;
   $("#upd").textContent = (data && data.updated ? "Подписчики и публикации обновлены: " + dateRu(data.updated) : "Автоданные ещё не загружены") + "  ·  Аудитория: " + dateRu(AUDIENCE.updated);
 }
