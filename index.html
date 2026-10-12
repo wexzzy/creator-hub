@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>wexzzy — Creator Hub</title>
-<meta name="description" content="Контент о девайсах, сетапах и периферии. Гир, промокоды и сотрудничество.">
-<meta property="og:title" content="wexzzy — Creator Hub">
-<meta property="og:description" content="Контент о девайсах, сетапах и периферии. Гир, промокоды и сотрудничество.">
-<meta property="og:image" content="https://YOURDOMAIN.com/og-image.jpg">
+<title>wexzzy — creator hub</title>
+<meta name="description" content="content about devices, setups and peripherals. gear, promo codes and collabs.">
+<meta property="og:title" content="wexzzy — creator hub">
+<meta property="og:description" content="content about devices, setups and peripherals. gear, promo codes and collabs.">
+<meta property="og:image" content="https://wexzzy.com/og-image.jpg">
+<meta property="og:url" content="https://wexzzy.com/">
+<link rel="canonical" href="https://wexzzy.com/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a0a0a">
@@ -33,9 +35,10 @@
 }
 :root[data-theme="light"]{--bg:#fafafa;--surface:#fff;--surface2:#f1f1f1;--line:#e4e4e4;--text:#111;--muted:#6f6f6f;--good:#18814a;--warm:#8a5d00;--warm-bg:rgba(138,93,0,.1)}
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+body{margin:0;text-transform:lowercase;background:var(--bg);color:var(--text);font:400 15px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;cursor:pointer}
 :focus-visible{outline:2px solid var(--text);outline-offset:2px;border-radius:6px}
@@ -53,7 +56,7 @@ h1{margin:0;font:400 2.1rem/1.1 var(--serif);letter-spacing:-.01em;display:inlin
 .strip{display:flex;justify-content:center;gap:clamp(18px,6vw,44px);margin:28px 0 0;padding:20px 0;border-block:1px solid var(--line)}
 .strip div{text-align:center}
 .strip .n{font:600 1.5rem/1 var(--sans);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.strip .l{margin-top:6px;font:400 .68rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.strip .l{margin-top:6px;font:400 .68rem var(--mono);letter-spacing:.08em;color:var(--muted)}
 
 /* link rows */
 .links{display:grid;gap:10px;margin-top:24px}
@@ -99,26 +102,18 @@ h1{margin:0;font:400 2.1rem/1.1 var(--serif);letter-spacing:-.01em;display:inlin
 .seg button[aria-selected="true"]{background:var(--bg);color:var(--text);box-shadow:0 0 0 1px var(--line)}
 .chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:14px 0 4px;padding-bottom:2px}
 .chips::-webkit-scrollbar{display:none}
-.chip{flex:none;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;font:400 .72rem var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.chip{flex:none;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;font:400 .72rem var(--mono);letter-spacing:.04em;color:var(--muted)}
 .chip[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
 .grow{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
 .thumb{width:44px;height:44px;border-radius:9px;background:#fff;object-fit:contain;display:grid;place-items:center;border:1px solid var(--line)}
 .thumb.ph{background:var(--surface2);color:var(--muted);font:500 .8rem var(--mono)}
 .txt{display:grid;grid-template-columns:104px 1fr;gap:2px 12px;align-items:baseline;min-width:0}
-.cat{font:400 .66rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cat{font:400 .66rem var(--mono);letter-spacing:.08em;color:var(--muted)}
 .nm{font-weight:500}
 .why{grid-column:2;color:var(--muted);font-size:.82rem;margin-top:-2px}
 .buy{display:flex;align-items:center;gap:12px}
 .price{font:500 .85rem var(--mono);color:var(--warm)}
 .note{margin:16px 0 0;color:var(--muted);font-size:.78rem}
-
-/* reviews */
-.rev{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
-.rev .sc{font:600 1.15rem var(--mono)}
-.rev b{font-weight:500}
-.rev p{margin:2px 0 0;color:var(--muted);font-size:.85rem}
-.rev .pc{margin-top:4px;font:400 .72rem var(--mono)}
-.pc .p{color:var(--good)} .pc .m{color:var(--warm);margin-left:10px}
 
 /* form */
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
@@ -132,6 +127,8 @@ textarea.field{min-height:120px;resize:vertical}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .tags span{padding:5px 11px;border-radius:999px;background:var(--surface2);font-size:.78rem;color:var(--muted)}
 
+.field,.code code{text-transform:none}
+
 /* analytics */
 .stack{display:grid;gap:14px}
 .ahead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
@@ -144,7 +141,7 @@ textarea.field{min-height:120px;resize:vertical}
 .tile .d{font:500 .72rem var(--mono);margin-top:2px}
 .up{color:var(--good)} .down{color:var(--warm)}
 .spark{display:block;width:100%;height:56px;margin-top:14px;stroke:var(--text);fill:none;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;opacity:.8}
-.sub{margin:18px 0 8px;font:400 .68rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sub{margin:18px 0 8px;font:400 .68rem var(--mono);letter-spacing:.08em;color:var(--muted)}
 .bar{display:grid;grid-template-columns:52px 1fr 52px;gap:10px;align-items:center;margin:7px 0;font:400 .78rem var(--mono);color:var(--muted)}
 .bar i{display:block;height:6px;border-radius:6px;background:var(--surface2);overflow:hidden}
 .bar i b{display:block;height:100%;background:var(--text);border-radius:6px}
@@ -162,7 +159,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);text-al
 </style>
 </head>
 <body>
-<button class="theme" id="theme" aria-label="Сменить тему">◐</button>
+<button class="theme" id="theme" aria-label="toggle theme">◐</button>
 
 <main class="col">
   <header class="profile">
@@ -173,44 +170,39 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);text-al
     <div class="strip" id="strip" aria-live="polite"></div>
   </header>
 
-  <nav class="links" id="links" aria-label="Ссылки"></nav>
+  <nav class="links" id="links" aria-label="links"></nav>
   <img class="hero-img" id="heroimg" alt="" hidden>
 
-  <div class="sh"><span>01</span><h2>Скидки и промокоды</h2></div>
-  <div class="slides" id="slides" tabindex="0" aria-label="Скидки"></div>
+  <div class="sh"><span>01</span><h2>deals &amp; codes</h2></div>
+  <div class="slides" id="slides" tabindex="0" aria-label="deals"></div>
   <div class="ctrl">
-    <button id="prev" aria-label="Назад">←</button>
+    <button id="prev" aria-label="previous">←</button>
     <div class="dots" id="dots"></div>
-    <button id="next" aria-label="Вперёд">→</button>
+    <button id="next" aria-label="next">→</button>
   </div>
 
-  <div class="sh"><span>02</span><h2>Мой гир</h2></div>
-  <div class="seg" role="tablist" aria-label="Раздел гира">
-    <button role="tab" id="t-periph" aria-selected="true">Периферия</button>
-    <button role="tab" id="t-specs" aria-selected="false">Спеки ПК</button>
+  <div class="sh"><span>02</span><h2>my gear</h2></div>
+  <div class="seg" role="tablist" aria-label="gear section">
+    <button role="tab" id="t-periph" aria-selected="true">peripherals</button>
+    <button role="tab" id="t-specs" aria-selected="false">pc specs</button>
   </div>
-  <div class="chips" id="chips" aria-label="Тип устройства"></div>
+  <div class="chips" id="chips" aria-label="device type"></div>
   <div id="glist" role="tabpanel"></div>
-  <p class="note">Ссылки партнёрские: если купите по ним, я получу комиссию, а цена для вас не изменится.</p>
+  <p class="note">affiliate links: if you buy through them i may earn a commission, at no extra cost to you.</p>
 
-  <div id="revwrap" hidden>
-    <div class="sh"><span>03</span><h2>Обзоры</h2></div>
-    <div id="revs"></div>
-  </div>
-
-  <div class="sh"><span>04</span><h2>Сотрудничество</h2></div>
+  <div class="sh"><span>03</span><h2>work with me</h2></div>
   <form class="card" id="form">
-    <h3>Работаем вместе</h3>
+    <h3>work with me</h3>
     <p id="cdesc"></p>
-    <input class="field" name="email" type="email" placeholder="Ваша почта" required autocomplete="email">
-    <input class="field" name="subject" placeholder="Тема" required>
-    <textarea class="field" name="message" placeholder="Сообщение…" required></textarea>
-    <button class="send" type="submit">Отправить</button>
+    <input class="field" name="email" type="email" placeholder="your email" required autocomplete="email">
+    <input class="field" name="subject" placeholder="subject" required>
+    <textarea class="field" name="message" placeholder="your message…" required></textarea>
+    <button class="send" type="submit">send message</button>
     <div id="fstat" aria-live="polite"></div>
     <div class="tags" id="tags"></div>
   </form>
 
-  <div class="sh"><span>05</span><h2>Аналитика</h2></div>
+  <div class="sh"><span>04</span><h2>analytics</h2></div>
   <div class="stack" id="analytics"></div>
   <div class="upd" id="upd"></div>
 
@@ -222,68 +214,55 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);text-al
 const SITE = {
   name: "wexzzy",
   verified: false,
-  avatar: "img/avatar.jpg",                 // положите фото в папку img (если файла нет — будет буква)
+  avatar: "img/avatar.jpg",                 // фото в папку img (нет файла = буква)
   heroImage: "",                            // например "img/setup.jpg"; пусто = не показывать
-  meta: ["kazakhstan", "4 года в контенте", "tech addict"],
+  meta: ["kazakhstan", "4 years in content", "tech addict"],
   bio: "делаю контент о сетапах и девайсах",
   email: "wexzzymedia@gmail.com",
   country: "kazakhstan"
 };
 const CONTACT = {
-  description: "открыт к сотрудничеству. напишите мне.",
-  endpoint: "",  // адрес формы Formspree (https://formspree.io/f/xxxx). Пусто = письмо откроется в почтовой программе
-  tags: ["Спонсорские обзоры", "Партнёрские программы", "Амбассадорство", "Розыгрыши", "Распаковки"]
+  description: "open to sponsorships, reviews and brand collabs. send me a message.",
+  endpoint: "",  // адрес формы Formspree (https://formspree.io/f/xxxx). Пусто = откроется почтовая программа
+  tags: ["sponsored reviews", "affiliate partnerships", "brand ambassador", "giveaways", "unboxings"]
 };
 const LINKS = [
-  { mono: "TT", label: "TikTok",    handle: "@wexzzy_", url: "https://www.tiktok.com/@wexzzy_" },
-  { mono: "IG", label: "Instagram", handle: "@wexzzy_", url: "https://www.instagram.com/wexzzy_" },
-  { mono: "YT", label: "YouTube",   handle: "@wexzzy",  url: "https://youtube.com/@wexzzy" },
-  { mono: "@",  label: "Почта",     handle: "wexzzymedia@gmail.com", url: "mailto:wexzzymedia@gmail.com" }
+  { mono: "TT", label: "tiktok",    handle: "@wexzzy_", url: "https://www.tiktok.com/@wexzzy_" },
+  { mono: "IG", label: "instagram", handle: "@wexzzy_", url: "https://www.instagram.com/wexzzy_" },
+  { mono: "YT", label: "youtube",   handle: "@wexzzy",  url: "https://youtube.com/@wexzzy" },
+  { mono: "@",  label: "email",     handle: "wexzzymedia@gmail.com", url: "mailto:wexzzymedia@gmail.com" }
 ];
 
 /* Скидки. logo: путь к картинке (необязательно). Без logo показывается название магазина. */
 const DEALS = [
-  { shop: "Магазин 1", off: "−5%",  title: "Магазин 1 — скидка на всё", text: "Механические клавиатуры, кейкапы и аксессуары.", code: "YOURNAME", url: "#", logo: "" },
-  { shop: "Магазин 2", off: "−10%", title: "Магазин 2 — периферия",     text: "Мыши, коврики и аксессуары для игр.",          code: "YOURNAME10", url: "#", logo: "" }
+  { shop: "iqunix", off: "−5%", title: "iqunix — 5% off", text: "mechanical keyboards and accessories.", code: "wexzzy", url: "#", logo: "" }
+  // следующий магазин добавляйте новой строкой по этому же образцу
 ];
 
 /* Периферия: плоский список. type — тип устройства (по нему работает фильтр).
    img — картинка товара (необязательно), price — цена (необязательно), why — короткая пометка. */
 const GEAR = [
-  { type: "Монитор",    name: "Название монитора", why: "OLED 240 Гц",         url: "#", img: "", price: "" },
-  { type: "Стол",       name: "Название стола",    why: "",                    url: "#", img: "", price: "" },
-  { type: "Кресло",     name: "Название кресла",   why: "",                    url: "#", img: "", price: "" },
-  { type: "Клавиатура", name: "Название клавиатуры", why: "Тихие линейные свичи", url: "#", img: "", price: "$149" },
-  { type: "Мышь",       name: "Название мыши",     why: "55 г, беспроводная",  url: "#", img: "", price: "$99" },
-  { type: "Коврик",     name: "Название коврика",  why: "",                    url: "#", img: "", price: "" },
-  { type: "Микрофон",   name: "Название микрофона", why: "",                   url: "#", img: "", price: "$89" },
-  { type: "Наушники",   name: "Название наушников", why: "",                   url: "#", img: "", price: "$129" },
-  { type: "Камера",     name: "Название камеры",   why: "",                    url: "#", img: "", price: "" }
+  { type: "keyboard",   name: "Epomaker HE68 Lite",               why: "", url: "#", img: "", price: "" },
+  { type: "mouse",      name: "WLMouse Beast G Medium",           why: "", url: "#", img: "", price: "" },
+  { type: "mousepad",   name: "X-raypad Aqua Control + Poron 500×500", why: "", url: "#", img: "", price: "" },
+  { type: "headphones", name: "Ziigaat x Vivir Digital Rumba",    why: "", url: "#", img: "", price: "" },
+  { type: "microphone", name: "Fifine AM8",                       why: "", url: "#", img: "", price: "" },
+  { type: "mic arm",    name: "Fifine BM88",                      why: "", url: "#", img: "", price: "" }
 ];
 
 /* Спеки ПК */
 const SPECS = [
-  { k: "Процессор",   v: "AMD Ryzen 7 7800X3D",    url: "#" },
-  { k: "Видеокарта",  v: "NVIDIA RTX 4070 Super",  url: "#" },
-  { k: "Память",      v: "32 ГБ DDR5 6000",        url: "#" },
-  { k: "Материнка",   v: "Название платы",         url: "#" },
-  { k: "Накопитель",  v: "NVMe 2 ТБ",              url: "#" },
-  { k: "Блок питания", v: "850 Вт 80+ Gold",       url: "#" },
-  { k: "Корпус",      v: "Название корпуса",       url: "#" }
-];
-
-/* Обзоры. Оставьте массив пустым [], чтобы скрыть раздел. */
-const REVIEWS = [
-  { title: "Название устройства", score: "9.0", text: "Две недели ежедневного использования, вывод в одну строку.", pros: "Лёгкая, сенсор", cons: "Цена", url: "#" }
+  // пока пусто: вкладка "pc specs" скрыта. Пример строки:
+  // { k: "cpu", v: "model name", url: "https://..." }
 ];
 
 /* Аудитория: данные из ваших приложений, вводятся вручную (API их не отдаёт) */
 const AUDIENCE = {
   updated: "2026-10-12",
-  period: "последние 60 дней",
-  metrics: [["3.2M", "Просмотры"], ["976.8K", "Зрители"], ["122.7K", "Лайки"], ["5.7K", "Репосты"], ["5.1K", "Комментарии"]],
+  period: "last 60 days",
+  metrics: [["3.2M", "views"], ["976.8K", "viewers"], ["122.7K", "likes"], ["5.7K", "shares"], ["5.1K", "comments"]],
   ages: [],   // возраст пока не указан; например [["18–24", 38], ["25–34", 45]]
-  countries: [["Россия", 44.5], ["Казахстан", 14.7], ["Украина", 9.3], ["Беларусь", 8.3], ["США", 4.1]]
+  countries: [["russia", 44.5], ["kazakhstan", 14.7], ["ukraine", 9.3], ["belarus", 8.3], ["us", 4.1]]
 };
 /* ====================================================================== */
 
@@ -297,8 +276,9 @@ const K = (n) => {
   if (a >= 1e3) return String(+(n / 1e3).toFixed(1)) + "K";
   return String(n);
 };
+const has = (u) => u && u !== "#";
 const REL = 'rel="sponsored nofollow noopener noreferrer" target="_blank"';
-const dateRu = (d) => new Date(d).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" });
+const dateRu = (d) => new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 
 /* тема */
 const root = document.documentElement;
@@ -317,7 +297,7 @@ const img = new Image(); img.className = "avatar"; img.alt = SITE.name;
 img.onload = () => av.replaceWith(img);
 img.onerror = () => { av.className = "avatar"; av.textContent = SITE.name.charAt(0).toUpperCase(); };
 img.src = SITE.avatar;
-$("#name").innerHTML = esc(SITE.name) + (SITE.verified ? '<svg width="18" height="18" viewBox="0 0 24 24" aria-label="Подтверждён"><circle cx="12" cy="12" r="11" fill="#3b82f6"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>' : "");
+$("#name").innerHTML = esc(SITE.name) + (SITE.verified ? '<svg width="18" height="18" viewBox="0 0 24 24" aria-label="verified"><circle cx="12" cy="12" r="11" fill="#3b82f6"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>' : "");
 $("#meta").textContent = SITE.meta.join("  ·  ");
 $("#bio").textContent = SITE.bio;
 $("#links").innerHTML = LINKS.map(l =>
@@ -325,18 +305,19 @@ $("#links").innerHTML = LINKS.map(l =>
 if (SITE.heroImage) { const h = $("#heroimg"); h.src = SITE.heroImage; h.hidden = false; h.onerror = () => h.remove(); }
 $("#cdesc").textContent = CONTACT.description;
 $("#tags").innerHTML = CONTACT.tags.map(t => `<span>${esc(t)}</span>`).join("");
-$("#foot").textContent = `${SITE.name} · ${SITE.country} · Партнёрские ссылки помогают поддерживать контент`;
+$("#foot").textContent = `${SITE.name} · ${SITE.country} · affiliate links help support my content`;
 
 /* скидки: карусель */
 $("#slides").innerHTML = DEALS.map((d, i) =>
   `<article class="deal"><div class="logo">${d.logo ? `<img src="${esc(d.logo)}" alt="${esc(d.shop)}">` : esc(d.shop)}</div>
    <div class="body"><span class="badge">${esc(d.off)}</span><span class="shop">${esc(d.shop)}</span>
    <h3>${esc(d.title)}</h3><p>${esc(d.text)}</p>
-   <div class="code"><code>${esc(d.code)}</code><button class="btn" data-copy="${i}">Копировать</button></div>
-   <a class="btn block" href="${esc(d.url)}" ${REL}>Перейти в магазин ↗</a>
-   <p class="thanks">Спасибо, что поддерживаете меня кодом!</p></div></article>`).join("");
+   <div class="code"><code>${esc(d.code)}</code><button class="btn" data-copy="${i}">copy</button></div>
+   ${has(d.url) ? `<a class="btn block" href="${esc(d.url)}" ${REL}>visit shop ↗</a>` : ""}
+   <p class="thanks">thanks for supporting me if you use my code!</p></div></article>`).join("");
 const sl = $("#slides");
-$("#dots").innerHTML = DEALS.map((_, i) => `<button aria-label="Слайд ${i + 1}" data-i="${i}"></button>`).join("");
+if (DEALS.length < 2) $(".ctrl").hidden = true;
+$("#dots").innerHTML = DEALS.map((_, i) => `<button aria-label="slide ${i + 1}" data-i="${i}"></button>`).join("");
 const syncDots = () => {
   const i = Math.round(sl.scrollLeft / sl.clientWidth);
   document.querySelectorAll("#dots button").forEach((b, j) => b.setAttribute("aria-current", j === i));
@@ -347,9 +328,9 @@ $("#next").onclick = () => sl.scrollBy({ left: sl.clientWidth, behavior: "smooth
 $("#dots").onclick = (e) => { const b = e.target.closest("button"); if (b) sl.scrollTo({ left: b.dataset.i * sl.clientWidth, behavior: "smooth" }); };
 document.addEventListener("click", async (e) => {
   const b = e.target.closest("[data-copy]"); if (!b) return;
-  try { await navigator.clipboard.writeText(DEALS[b.dataset.copy].code); b.textContent = "Скопировано"; }
-  catch { b.textContent = "Скопируйте вручную"; }
-  setTimeout(() => b.textContent = "Копировать", 1800);
+  try { await navigator.clipboard.writeText(DEALS[b.dataset.copy].code); b.textContent = "copied"; }
+  catch { b.textContent = "copy manually"; }
+  setTimeout(() => b.textContent = "copy", 1800);
 });
 
 /* гир */
@@ -361,30 +342,23 @@ function renderGear() {
   const chips = $("#chips");
   chips.hidden = tab !== "periph";
   if (tab === "periph") {
-    chips.innerHTML = ["all", ...types].map(t => `<button class="chip" data-f="${esc(t)}" aria-pressed="${filter === t}">${t === "all" ? "Все" : esc(t)}</button>`).join("");
+    chips.innerHTML = ["all", ...types].map(t => `<button class="chip" data-f="${esc(t)}" aria-pressed="${filter === t}">${t === "all" ? "all" : esc(t)}</button>`).join("");
     $("#glist").innerHTML = GEAR.filter(g => filter === "all" || g.type === filter).map(g => {
       const th = g.img ? `<img class="thumb" src="${esc(g.img)}" alt="" loading="lazy">` : `<span class="thumb ph">${esc(g.type.slice(0, 2))}</span>`;
       return `<div class="grow">${th}<div class="txt"><span class="cat">${esc(g.type)}</span><span class="nm">${esc(g.name)}</span>${g.why ? `<span class="why">${esc(g.why)}</span>` : ""}</div>
-        <div class="buy">${g.price ? `<span class="price">${esc(g.price)}</span>` : ""}<a class="btn" href="${esc(g.url)}" ${REL}>Купить ↗</a></div></div>`;
+        <div class="buy">${g.price ? `<span class="price">${esc(g.price)}</span>` : ""}${has(g.url) ? `<a class="btn" href="${esc(g.url)}" ${REL}>buy ↗</a>` : ""}</div></div>`;
     }).join("");
   } else {
     $("#glist").innerHTML = SPECS.map(s =>
       `<div class="grow"><span class="thumb ph">${esc(s.k.slice(0, 2))}</span><div class="txt"><span class="cat">${esc(s.k)}</span><span class="nm">${esc(s.v)}</span></div>
-       <div class="buy"><a class="btn" href="${esc(s.url)}" ${REL}>Купить ↗</a></div></div>`).join("");
+       <div class="buy">${has(s.url) ? `<a class="btn" href="${esc(s.url)}" ${REL}>buy ↗</a>` : ""}</div></div>`).join("");
   }
 }
 $("#t-periph").onclick = () => { tab = "periph"; renderGear(); };
 $("#t-specs").onclick = () => { tab = "specs"; renderGear(); };
 $("#chips").onclick = (e) => { const c = e.target.closest(".chip"); if (c) { filter = c.dataset.f; renderGear(); } };
+if (!SPECS.length) $(".seg").hidden = true;
 renderGear();
-
-/* обзоры */
-if (REVIEWS.length) {
-  $("#revwrap").hidden = false;
-  $("#revs").innerHTML = REVIEWS.map(r =>
-    `<div class="rev"><span class="sc">${esc(r.score)}</span><div><b>${esc(r.title)}</b><p>${esc(r.text)}</p><div class="pc"><span class="p">+ ${esc(r.pros)}</span><span class="m">− ${esc(r.cons)}</span></div></div>
-     <a class="btn" href="${esc(r.url)}" ${REL}>Читать</a></div>`).join("");
-}
 
 /* форма: Formspree или письмо в почтовой программе */
 $("#form").addEventListener("submit", async (e) => {
@@ -393,12 +367,12 @@ $("#form").addEventListener("submit", async (e) => {
   if (CONTACT.endpoint) {
     try {
       const r = await fetch(CONTACT.endpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(d) });
-      st.textContent = r.ok ? "Отправлено, спасибо!" : "Не удалось отправить. Напишите на почту.";
+      st.textContent = r.ok ? "sent, thanks!" : "could not send. please email me directly.";
       if (r.ok) f.reset();
-    } catch { st.textContent = "Не удалось отправить. Напишите на почту."; }
+    } catch { st.textContent = "could not send. please email me directly."; }
   } else {
-    location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(d.subject)}&body=${encodeURIComponent(d.message + "\n\nОт: " + d.email)}`;
-    st.textContent = "Открываю почтовую программу…";
+    location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(d.subject)}&body=${encodeURIComponent(d.message + "\n\nfrom: " + d.email)}`;
+    st.textContent = "opening your mail app…";
   }
 });
 
@@ -415,17 +389,17 @@ function render(data) {
   $("#analytics").innerHTML = ["tiktok", "instagram", "youtube"].map(k => {
     const p = P[k] || {}, s = series(k), d = s.length > 1 ? s[s.length - 1] - s[s.length - 2] : null;
     const tiles = [
-      [K(p.followers), "Подписчики", d == null ? "" : `<div class="d ${d >= 0 ? "up" : "down"}">${d >= 0 ? "+" : "−"}${K(Math.abs(d))} за нед.</div>`],
-      p.posts != null ? [K(p.posts), "Публикации", ""] : null,
-      p.views != null ? [K(p.views), "Просмотры", ""] : null
+      [K(p.followers), "followers", d == null ? "" : `<div class="d ${d >= 0 ? "up" : "down"}">${d >= 0 ? "+" : "−"}${K(Math.abs(d))} this week</div>`],
+      p.posts != null ? [K(p.posts), "posts", ""] : null,
+      p.views != null ? [K(p.views), "views", ""] : null
     ].filter(Boolean);
-    return `<section class="card"><div class="ahead"><h3>${PLAT[k]}</h3><small>авто · раз в неделю</small></div>
+    return `<section class="card"><div class="ahead"><h3>${PLAT[k]}</h3><small>auto · weekly</small></div>
       <div class="tiles">${tiles.map(t => `<div class="tile"><div class="n">${t[0]}</div><div class="l">${t[1]}</div>${t[2]}</div>`).join("")}</div>${spark(s)}</section>`;
-  }).join("") + `<section class="card"><div class="ahead"><h3>Охваты и аудитория</h3><small>${esc(AUDIENCE.period)}</small></div>
+  }).join("") + `<section class="card"><div class="ahead"><h3>reach &amp; audience</h3><small>${esc(AUDIENCE.period)}</small></div>
     <div class="tiles">${AUDIENCE.metrics.map(m => `<div class="tile"><div class="n">${esc(m[0])}</div><div class="l">${esc(m[1])}</div></div>`).join("")}</div>
-    ${AUDIENCE.ages.length ? `<div class="sub">Возраст</div>${AUDIENCE.ages.map(a => `<div class="bar"><span>${esc(a[0])}</span><i><b style="width:${a[1]}%"></b></i><span>${a[1]}%</span></div>`).join("")}` : ""}
-    <div class="sub">Топ стран</div><div class="loc">${AUDIENCE.countries.map(c => `<span>${esc(c[0])}<em>${c[1]}%</em></span>`).join("")}</div></section>`;
-  $("#upd").textContent = (data && data.updated ? "Подписчики и публикации обновлены: " + dateRu(data.updated) : "Автоданные ещё не загружены") + "  ·  Аудитория: " + dateRu(AUDIENCE.updated);
+    ${AUDIENCE.ages.length ? `<div class="sub">age</div>${AUDIENCE.ages.map(a => `<div class="bar"><span>${esc(a[0])}</span><i><b style="width:${a[1]}%"></b></i><span>${a[1]}%</span></div>`).join("")}` : ""}
+    <div class="sub">top countries</div><div class="loc">${AUDIENCE.countries.map(c => `<span>${esc(c[0])}<em>${c[1]}%</em></span>`).join("")}</div></section>`;
+  $("#upd").textContent = (data && data.updated ? "followers & posts updated: " + dateRu(data.updated) : "auto data not loaded yet") + "  ·  audience: " + dateRu(AUDIENCE.updated);
 }
 render(null);
 fetch("stats.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : Promise.reject()).then(render).catch(() => {});
